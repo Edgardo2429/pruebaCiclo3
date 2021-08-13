@@ -1,0 +1,11 @@
+com\example\ciclo3\modelos\UsuarioModelo.class
+com\example\ciclo3\modelos\PartidoModelo.class
+com\example\ciclo3\servicios\UsuarioServicio.class
+com\example\ciclo3\ServletInitializer.class
+com\example\ciclo3\controlador\UsuarioControlador.class
+com\example\ciclo3\modelos\EquipoModelo.class
+com\example\ciclo3\Ciclo3Application.class
+com\example\ciclo3\controlador\EquipoControlador.class
+com\example\ciclo3\servicios\PartidoServicio.class
+com\example\ciclo3\controlador\PartidoControlador.class
+com\example\ciclo3\servicios\EquipoServicio.class
