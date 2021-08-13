@@ -1,0 +1,124 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+  $.ajax({
+            url: "http://127.0.0.1:8080/usuarios/ver",
+            method: "GET",
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: "json",
+            success: function (respuesta) {
+              respuesta.forEach(function (element) {
+                  $("#usuarios tbody").append('<tr><td>' + element.id + '</td><td>' + element.nombre + '</td><td>' + element.correo + '</td><td>' + element.nombreusuario + '</td></tr>');
+              })
+                }
+            })
+          })
+ </script>
+<header>
+  <style>
+    body {
+      background-color: #fff;
+    }
+
+    .form-input {
+      margin-bottom: 1rem;
+    }
+
+    .input {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + 0.75rem + 4px);
+      padding: 0.375rem 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #FFF;
+      background-clip: padding-box;
+      border: 2px solid #2a76c2;
+      border-radius: 4px;
+    }
+
+    .estiloForm {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px;
+    }
+
+    .btn {
+      cursor: pointer;
+      color: #FFF;
+      background-color: #009688;
+      border-color: #009688;
+      text-align: center;
+      border: 2px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      border-radius: 3px;
+    }
+
+    .btn:hover {
+      color: #FFF;
+      background-color: #007065;
+      border-color: #00635a;
+    }
+
+    thead {
+      color: #FFF;
+      background-color: #009688;
+    }
+
+    table {
+      border: 1px solid black0;
+      background-color: white;
+    }
+
+    table.col {
+      border-collapse: collapse;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    tr,
+    th {
+      width: 25%;
+      text-align: left;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      text-align: center;
+      vertical-align: inherit;
+    }
+
+    tbody {
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</header>
+
+<body>
+  <center>
+    <div class="estiloForm">
+      <h1 class="h3 mb-3 font-weight-normal">VER USUARIOS</h1>
+      <table class="col" id="usuarios" width="50%" border="1" style="border-color: #00635a">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Nombre Usuario</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </center>
+</body>
